@@ -1,0 +1,56 @@
+.repositoriesView #repositoriesList h3 {
+  margin: 0;
+  line-height: 1.5em;
+}
+.repositoriesView #repositoriesList h3 a {
+  color: black;
+}
+
+.repositoriesView #repositoriesList > li {
+  position: relative;
+  border-bottom: 1px solid #EFEFEF;
+  padding: 5px 0;
+}
+
+.repositoriesView #repositoriesList > li.notice {
+  text-align: center;
+  border-bottom: none;
+}
+
+.repositoriesView .stats {
+  text-align: right;
+}
+
+.repositoriesView .stats li {
+  display: inline-block;
+  font-size: 1.4em;
+  height: 64px;
+  border-radius: 32px;
+  text-align: center;
+  line-height: 64px;
+  margin-left: 10px;
+}
+
+.repositoriesView .issues:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: #FFB74D;
+}
+
+.repositoriesView .issues {
+  border: #FFB74D 1px solid;
+  cursor: pointer;
+  transition: all 0.1s;
+  width: 64px;
+}
+
+.repositoriesView .issues a{
+    color: black;
+}
+
+.repositoriesView .search-input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}

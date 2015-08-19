@@ -1,0 +1,19 @@
+.issuesView h3 {
+  margin: 0;
+  line-height: 1.5em;
+}
+.issuesView h3 a{
+    color: black;
+}
+
+.issuesView li {
+  position: relative;
+  border-bottom: 1px solid #EFEFEF;
+  padding: 5px 0;
+}
+
+
+.issuesView li.notice {
+  text-align: center;
+  border-bottom: none;
+}

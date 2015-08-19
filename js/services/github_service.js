@@ -5,7 +5,8 @@
 
   function githubService($http) {
     return {
-      getRepos: getRepos
+      getRepos: getRepos,
+      getIssues: getIssues
     };
 
     function getRepos(term, page) {

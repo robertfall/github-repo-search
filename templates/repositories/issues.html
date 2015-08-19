@@ -1,5 +1,39 @@
-<ul class="issues">
-    <li class="row" ng-repeat="issue in vm.issues track by issue.id">
-        <h3>{{issue.title}}</h3>
-    </li>
-</ul>
+<div class="container issuesView">
+    <section class="card">
+        <div class="card-header">
+            Issues for {{vm.repositoryName}}
+            <ul class="pull-right">
+                <li>
+                    <a ng-href="/">
+                        <i class="fa fa-home"></i>
+                        Home
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <ul class="issues">
+                <li class ="notice" ng-if="vm.loading">Loading...</li>
+                <li class="row" ng-repeat="issue in vm.issues track by issue.id">
+                    <div class="col-lg-9">
+                        <h3>
+                            <a ng-href="{{issue.url}}">
+                              {{issue.title}}
+                            </a>
+                        </h3>
+                        <p>
+                            {{ issue.body }}
+                            <small> created {{issue.created_at | date}}</small>
+                        </p>
+                    </div>
+                    <ul class="stats col-lg-3">
+                        <li class="comments">
+                            <i class="fa fa-comment"></i>
+                            {{issue.comments}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

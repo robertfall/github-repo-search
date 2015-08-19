@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container repositoriesView">
     <section class="card">
         <div class="card-header">
             <form class="search-form">
@@ -35,9 +35,11 @@
                             <i class="fa fa-star"></i>
                             {{repo.stargazers_count}}
                         </li>
-                        <li class="issues" ng-click="vm.showIssues(repo.full_name)">
-                            <i class="fa fa-exclamation"></i>
-                            {{repo.open_issues}}
+                        <li class="issues">
+                            <a ng-href="/issues/{{repo.full_name}}">
+                              <i class="fa fa-exclamation"></i>
+                              {{repo.open_issues}}
+                            </a>
                         </li>
                     </ul>
                 </li>

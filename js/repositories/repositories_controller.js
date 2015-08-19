@@ -5,7 +5,7 @@
 
   function repositories(githubService) {
     var vm = this;
-    var debouncedSearch = _.debounce(search, 1000);
+    var debouncedSearch = _.debounce(search, 600);
 
     vm.searchTerm = "";
     vm.isEmpty = isEmpty;
