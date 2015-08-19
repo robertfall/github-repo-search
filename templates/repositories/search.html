@@ -1,0 +1,47 @@
+<div class="container">
+    <section class="card">
+        <div class="card-header">
+            <form class="search-form">
+                <input type="text"
+                       placeholder="Enter repository name. eg. Bootstrap"
+                       class="search-input"
+                       ng-model="vm.searchTerm"
+                       ng-change="vm.termChanged()" />
+
+            </form>
+        </div>
+        <div class="card-body">
+            <ul id="repositoriesList">
+                <li class ="notice" ng-if="vm.isSearching">Loading...</li>
+                <li class ="notice" ng-if="vm.isPristine">Enter a repository name above to start</li>
+                <li class ="notice" ng-if="vm.isPristine && vm.isEmpty()">No repositories found</li>
+                <li ng-if="vm.error">Error: {{repo.error.message}}</li>
+                <li ng-if="!vm.isSearching" ng-repeat="repo in vm.repos track by repo.id" class="row">
+                    <div class="col-lg-9">
+                        <h3>
+                            <a ng-href="{{repo.html_url}}">{{repo.full_name}}</a>
+                            <small>
+                                <a ng-href="{{repo.homepage}}">{{repo.homepage}}</a>
+                            </small>
+                        </h3>
+                        <p class="description">{{repo.description}}</p>
+                    </div>
+                    <ul class="stats col-lg-3">
+                        <li class="forks">
+                            <i class="fa fa-code-fork"></i>
+                            {{repo.forks_count}}
+                        </li>
+                        <li class="stars">
+                            <i class="fa fa-star"></i>
+                            {{repo.stargazers_count}}
+                        </li>
+                        <li class="issues" ng-click="vm.showIssues(repo.full_name)">
+                            <i class="fa fa-exclamation"></i>
+                            {{repo.open_issues}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

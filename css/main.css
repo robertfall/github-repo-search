@@ -1,22 +1,77 @@
+body {
+    background-color: #EFEFEF;
+    padding: 20px 15px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#repositoriesList h3{
+    margin: 0;
+    line-height: 1.5em;
+}
+
+#repositoriesList > li {
+    position: relative;
+    border-bottom: 1px solid #EFEFEF;
+    padding: 5px 0;
+}
+
+#repositoriesList > li.notice {
+    text-align: center;
+    border-bottom: none;
+}
+
+.stats {
+    text-align: right;
+}
+
+.stats li {
+    display: inline-block;
+    font-size: 1.4em;
+    height: 64px;
+    border-radius: 32px;
+    text-align: center;
+    line-height: 64px;
+    margin-left: 10px;
+}
 
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.issues:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: #FFB74D;
+}
 
+.issues {
+    border: #FFB74D 1px solid;
+    cursor: pointer;
+    transition: all 0.1s;
+    width: 64px;
+}
+.card {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
 
+.card-header {
+    position: relative;
+    background: #f8f8f8;
+    padding: 15px;
+}
 
+.card-body {
+    padding: 15px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.search-input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
